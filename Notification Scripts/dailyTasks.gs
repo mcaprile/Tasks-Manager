@@ -84,7 +84,7 @@ function dailyTasks(spreadsheetID,staffSheetLink) {
       return this.alltsks;
     }
     
-    var title = "LRE Tasks (" + (mAssigned.length + mReceived.length + mInProgress.length + mPendingR.length + mOngoing.length) + ")"; //e-mail subject
+    var title = "Tasks (" + (mAssigned.length + mReceived.length + mInProgress.length + mPendingR.length + mOngoing.length) + ")"; //e-mail subject
     
     //if tasks exist for this staff member, send e-mail
     if ((mAssigned.length + mReceived.length + mInProgress.length + mPendingR.length  + mOngoing.length) > 0) {
@@ -93,5 +93,5 @@ function dailyTasks(spreadsheetID,staffSheetLink) {
     }
     
   }
-  lateNotifications(); //trigger late tasks notification
+  lateNotifications(spreadsheetID); //trigger late tasks notification
 }
