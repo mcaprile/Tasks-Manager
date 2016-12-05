@@ -26,7 +26,7 @@ The tasks submission form is here (it will updated with the custom values you su
 
 I prepared the following documents that PIs (Principal Investigators – the persons who assigned the tasks) and staff members used as reference:
 
-	* tasks-manager-handout (http://michellece.com/wp-content/uploads/2016/12/TASKS-MANAGER-HANDOUT-1.pdf)
+	* tasks-manager-handout (http://michellece.com/wp-content/uploads/2016/12/TASKS-MANAGER-HANDOUT-2.pdf)
 	* tasks-manager-guide (http://michellece.com/wp-content/uploads/2016/12/TASKS-MANAGER-GUIDE.pdf)
  
 
