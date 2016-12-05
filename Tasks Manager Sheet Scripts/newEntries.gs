@@ -17,9 +17,9 @@ function newEntries(spreadsheetID,activeSS) {
   }
   
   //creating project objects with properties
-  var proj1 = new project(demoSheetDataRange[0][1],demoSheetDataRange[0][3],0,cValues,1);
-  var proj2 = new project(demoSheetDataRange[1][1],demoSheetDataRange[1][3],1,cValues,2);
-  var proj3 = new project(demoSheetDataRange[2][1],demoSheetDataRange[2][3],2,cValues,3);
+  var proj1 = new project(demoSheetDataRange[0][1],"'Demo Values'!N1",0,cValues,1);
+  var proj2 = new project(demoSheetDataRange[1][1],"'Demo Values'!N2",1,cValues,2);
+  var proj3 = new project(demoSheetDataRange[2][1],"'Demo Values'!N3",2,cValues,3);
   
   var projs = [proj1,proj2,proj3]; //array of projects
   
@@ -43,7 +43,8 @@ function newEntries(spreadsheetID,activeSS) {
           var id = masSheet.getRange(row + 2, 1); //the task ID cell for current task
           
           //place task ID which includes the project abbreviation, today's month, today's year, and the current project count
-          id.setValue(abb + (today.getMonth() + 1) + (today.getFullYear().toString().substr(2,2)) + "-" + ("00" + projCount).slice (-3)); 
+          var numID = '"' + (today.getMonth() + 1) + (today.getFullYear().toString().substr(2,2)) + '","-","' + ("00" + projCount).slice (-3);
+          id.setFormula("=CONCATENATE(" + abb + "," + numID +'")'); 
           projCount++; //increase the current project's count by one
           demoSheet.getRange(rowNum,16).setValue(projCount); //update the project count
           updateReference(spreadsheetID);
