@@ -89,7 +89,7 @@ function dailyTasks(spreadsheetID,staffSheetLink) {
     //if tasks exist for this staff member, send e-mail
     if ((mAssigned.length + mReceived.length + mInProgress.length + mPendingR.length  + mOngoing.length) > 0) {
       var allTasks = dailyTL(mAssigned,mReceived,mInProgress,mPendingR,mOngoing);
-      MailApp.sendEmail({to: em, subject: title, htmlBody: "<a href='" + staffSheetLink + "'>Tasks to be completed:</a> <br><br>" + allTasks });
+      MailApp.sendEmail({to: em, subject: title, name: "Tasks Manager", replyTo: 'mcaprile@asu.edu', htmlBody: "<a href='" + staffSheetLink + "'>Tasks to be completed:</a> <br><br>" + allTasks });
     }
     
   }

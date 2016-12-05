@@ -39,7 +39,7 @@ function newNotification(spreadsheetID,staffSheetLink) {
       var newTask = "<tr><td>" + tID + "</td><td>" + proj + "</td><td>" + startText + "</td><td>" + dueText + "</td><td>" + task + "</td><td>" + assigner + "</td><td>" + priority + "</td><td>" + status + "</td></tr>";
       
       //send new task notification e-mail
-      MailApp.sendEmail({to: em,subject: "New " + proj + " Task",htmlBody: "You have been assigned a <a href='" + staffSheetLink + "'>new task</a>: <br><br><table><tr style='font-weight:bold;'><td style='width: 90px;'>Task ID</td><td style='width: 80px;'>Project</td><td style='width: 100px;'>Start Date</td><td style='width: 100px;'>Due Date</td><td style='width: 400px;'>Task</td><td style='width: 140px;'>Assigned By</td><td style='width: 90px;'>Priority</td><td style='width: 90px;'>Status</td></tr><tr><td>" + newTask + "</td></tr></table>"});
+      MailApp.sendEmail({to: em,subject: "New " + proj + " Task",name: "Tasks Manager", replyTo: 'mcaprile@asu.edu', htmlBody: "You have been assigned a <a href='" + staffSheetLink + "'>new task</a>: <br><br><table><tr style='font-weight:bold;'><td style='width: 90px;'>Task ID</td><td style='width: 80px;'>Project</td><td style='width: 100px;'>Start Date</td><td style='width: 100px;'>Due Date</td><td style='width: 400px;'>Task</td><td style='width: 140px;'>Assigned By</td><td style='width: 90px;'>Priority</td><td style='width: 90px;'>Status</td></tr><tr><td>" + newTask + "</td></tr></table>"});
       
     }
   }

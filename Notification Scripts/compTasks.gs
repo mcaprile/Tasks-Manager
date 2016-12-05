@@ -52,7 +52,7 @@ function compTasks(spreadsheetID) {
     
     //if the array of completed tasks is more than zero, send e-mail
     if (aCompleted.length > 0) {
-      MailApp.sendEmail({to: em, subject: aTitle, htmlBody: "Tasks completed today: <br><br><table><tr style='font-weight:bold;'><td style='width: 110px;'>Task ID</td><td style='width: 80px;'>Project</td><td style='width: 80px;'>Due Date</td><td style='width: 400px;'>Task</td><td style='width: 110px;'>Assigned To</td><td style='width:100px;'>Time Completed</td><td style='width:60px;'>Priority</td><td style='width:40px;'>ETH</td><td style='width:100px;'>TH taken</td></tr><tr><td>" + aCompleted.join("</td></tr><tr><td>") + "</td></tr></table>"});
+      MailApp.sendEmail({to: em, subject: aTitle, name: "Tasks Manager", replyTo: 'mcaprile@asu.edu', htmlBody: "Tasks completed today: <br><br><table><tr style='font-weight:bold;'><td style='width: 110px;'>Task ID</td><td style='width: 80px;'>Project</td><td style='width: 80px;'>Due Date</td><td style='width: 400px;'>Task</td><td style='width: 110px;'>Assigned To</td><td style='width:100px;'>Time Completed</td><td style='width:60px;'>Priority</td><td style='width:40px;'>ETH</td><td style='width:100px;'>TH taken</td></tr><tr><td>" + aCompleted.join("</td></tr><tr><td>") + "</td></tr></table>"});
     }
     
     
