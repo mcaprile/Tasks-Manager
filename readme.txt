@@ -1,6 +1,6 @@
 Project page can be found here: http://michellece.com/Projects/
 
-Demo sheet: here
+Demo sheet: https://docs.google.com/spreadsheets/d/1UUIFF6WCGF36Grvjf6bqSGoYEnAVlNUCgkF4XHNY8RI/edit?usp=sharing
 
 Position: Management Intern for the Latino Resilience Enterprise at Arizona State University
 
